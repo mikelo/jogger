@@ -3,7 +3,7 @@ package com.ibm.jogger;
 import org.apache.logging.log4j.Marker;
 import org.apache.logging.log4j.MarkerManager;
 
-public class App {
+public class Jogger {
 
     public static void main( String[] args ) {
         Marker marker = MarkerManager.getMarker("CLASS");
