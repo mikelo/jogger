@@ -18,7 +18,7 @@ public class JoggerTest
         Jogger jogger = new Jogger();
         // jogger.info("Ignored", "value1", "value2", "value3");
 
-        System.out.println("ciao");
+        // System.out.println("ciao");
         assertTrue( true );
     }
 }

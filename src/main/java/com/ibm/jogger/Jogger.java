@@ -16,9 +16,13 @@ public class Jogger {
         // if (!bar.doIt()) {
         //     logger.error("Didn't do it.");
         // }
-        logger.error("error message");
-        logger.trace("trace message");
+        // logger.info('{"level":"info","name":"fred","home":"bedrock"}');
+        // logger.
+        logger.error("forza PIELLE");
+        logger.trace("forza roma");
+        logger.warn("forza warn");
         
+
         Marker marker = MarkerManager.getMarker("CLASS");
         Child child = new Child();
 
