@@ -5,7 +5,7 @@
 
   <groupId>com.ibm.jogger</groupId>
   <artifactId>jogger</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2-SNAPSHOT</version>
 
   <name>jogger</name>
   <!-- FIXME change it to the project's website -->
