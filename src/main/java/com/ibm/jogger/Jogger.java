@@ -1,15 +1,8 @@
 package com.ibm.jogger;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.Marker;
-import org.apache.logging.log4j.MarkerManager;
 import org.apache.logging.log4j.ThreadContext;
-import org.json.JSONObject;
 
 public class Jogger {
 
@@ -24,7 +17,7 @@ public class Jogger {
         // }
 
         logger.error("test message");
-        logger.trace("test message");
+        logger.trace("trace messages supported in kibana?");
         logger.warn("test message");
         ThreadContext.put("MSG", "message_id_test");
         ThreadContext.put("TRN", "transaction_id_test");
@@ -32,7 +25,12 @@ public class Jogger {
         // msgMap.put("MSG", "2292929");
         // JSONObject message = new JSONObject(msgMap);
         logger.error("test message");
-        // Marker marker = MarkerManager.getMarker("MESSID.2292929");
+        Exception e = new RuntimeException("This is only a test!");
+        logger.info("This is a simple message at INFO level. " +
+        "It will be hidden.");
+        logger.error("This is a simple message at ERROR level. " +
+        "This is the minimum visible level.", e);
+          // Marker marker = MarkerManager.getMarker("MESSID.2292929");
         // Child child = new Child();
 
         // System.out.println("------- Parent Logger ----------");
