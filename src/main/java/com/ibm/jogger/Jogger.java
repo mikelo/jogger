@@ -18,13 +18,16 @@ public class Jogger {
 
         logger.error("test message 1");
         // logger.trace("trace messages NOT supported in kibana?");
-        logger.warn("test message");
+        logger.warn("test message senza custom");
+        
+        
         ThreadContext.put("MSG", "message_id_test");
         ThreadContext.put("TRN", "transaction_id_test");
+        logger.error("test message CON custom");
+
         // Map<String,String> msgMap = new HashMap<>();
         // msgMap.put("MSG", "2292929");
         // JSONObject message = new JSONObject(msgMap);
-        logger.error("test message"); 
         Exception e = new RuntimeException("This is only a test!");
         logger.info("This is a simple message at INFO level. " +
         "It will be hidden.");

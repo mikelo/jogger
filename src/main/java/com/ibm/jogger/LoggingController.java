@@ -44,6 +44,20 @@ public class LoggingController {
         logger.warn("A WARN Message");
         logger.error("An ERROR Message");
 
+
+        ThreadContext.put("MSG", "message_id_test");
+        ThreadContext.put("TRN", "transaction_id_test");
+        logger.error("test message CON custom");
+
+        // Map<String,String> msgMap = new HashMap<>();
+        // msgMap.put("MSG", "2292929");
+        // JSONObject message = new JSONObject(msgMap);
+        Exception e = new RuntimeException("This is only a test!");
+        logger.info("This is a simple message at INFO level. " +
+        "It will be hidden.");
+        logger.error("This is a simple message at ERROR level. " +
+        "This is the minimum visible level.", e);
+
         return "Howdy! Check out the Logs to see the output...";
     }
 }
