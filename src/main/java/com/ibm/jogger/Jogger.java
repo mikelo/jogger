@@ -1,5 +1,7 @@
 package com.ibm.jogger;
 
+import java.util.HashMap;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.ThreadContext;
@@ -7,6 +9,7 @@ import org.apache.logging.log4j.ThreadContext;
 public class Jogger {
 
     private static final Logger logger = LogManager.getLogger();
+    private HashMap<String, Object> fieldData;
 
     public static void main( String[] args ) {
 
@@ -33,6 +36,8 @@ public class Jogger {
         "It will be hidden.");
         logger.error("This is a simple message at ERROR level. " +
         "This is the minimum visible level.", e);
+        // addFieldData("method", "info.getMethodName()");
+
           // Marker marker = MarkerManager.getMarker("MESSID.2292929");
         // Child child = new Child();
 
@@ -51,5 +56,13 @@ public class Jogger {
         // child.log(marker);
         // child.logFromChild(null);
         // child.logFromChild(marker);
-    }
-}
+
+      }
+      
+    //   private void addFieldData(String keyname, Object keyval) {
+    //     if (null != keyval) {
+    //         fieldData.put(keyname, keyval);
+    //     } 
+    // }
+
+  }
