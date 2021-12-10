@@ -1,15 +1,19 @@
 {
   "@timestamp": {
-    "$resolver": "timestamp",
-    "pattern": {
-      "format": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-      "timeZone": "UTC"
-    }
+    "$resolver": "timestamp"
   },
   "version": "1.0",
+  "level": {
+    "$resolver": "level",
+    "field": "name"
+  },
   "message": {
     "$resolver": "message",
     "stringified": true
+  },
+  "thread_name": {
+    "$resolver": "thread",
+    "field": "name"
   },
   "logger": {
     "$resolver": "logger",
@@ -23,6 +27,7 @@
   "tags": {
     "$resolver": "ndc"
   },
+  "source_host": "${hostName}",
   "line_number": {
     "$resolver": "source",
     "field": "lineNumber"
@@ -30,23 +35,6 @@
   "class": {
     "$resolver": "source",
     "field": "className"
-  },
-  "@version": 2,
-  "source_host": "${hostName}",
-  "message": {
-    "$resolver": "message",
-    "stringified": true
-  },
-  "thread_name": {
-    "$resolver": "thread",
-    "field": "name"
-  },
-  "@timestamp": {
-    "$resolver": "timestamp"
-  },
-  "level": {
-    "$resolver": "level",
-    "field": "name"
   },
   "file": {
     "$resolver": "source",
