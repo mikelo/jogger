@@ -3,7 +3,7 @@
 to build springboot app on openshift:
 
     mvn package oc:build -Popenshift
-    mvn package oc:deploy -Popenshift -DLEVEL=info
+    mvn oc:deploy -Popenshift
 
 to change log level at runtime
 
