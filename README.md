@@ -1,4 +1,4 @@
-#  minimalistic approach to JSON format logging
+#  minimalist approach to JSON format logging
 
 to build springboot app on openshift:
 
